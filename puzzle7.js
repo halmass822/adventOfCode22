@@ -35,30 +35,6 @@ function removeDuplicateFiles(inputArray) {
     return output;
 }
 
-const testDirectories = [
-    {directoryName: "A", contents: [
-        {fileName: "b.txt"}, 
-        {fileName: "c.txt"}, 
-        {fileName: "d.txt"}]
-    },
-    {directoryName: "B", contents: [
-        {fileName: "b.txt"}, 
-        {fileName: "c.txt"}, 
-        {fileName: "b.txt"}]
-    },
-    {directoryName: "A", contents: [
-        {fileName: "d.txt"}, 
-        {fileName: "d.txt"}, 
-        {fileName: "d.txt"}]
-    }
-]
-
-testDirectories.forEach(({contents}, index) => {
-    testDirectories[index] = removeDuplicateFiles(contents);
-})
-
-//console.log(testDirectories);
-
 function processInput(input) {
     const splitByLine = input.split("\n");
     let directories = [];
@@ -139,6 +115,8 @@ $ ls
 4060174 j
 8033020 d.log
 5626152 d.ext
-7214296 k`
+7214296 k
+`
 
 processInput(testInput);
+
